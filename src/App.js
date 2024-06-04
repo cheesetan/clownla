@@ -1,9 +1,12 @@
 import honk from './honk.JPG';
 import './App.css';
+import useSound from 'use-sound'
+import mySound from './mySound.mp3'
 
 function App() {
+  const [playSound] = useSound(mySound)
   const function1 = (event) => {
-    alert("Touch Start");
+    playSound()
   };
 
   return (
